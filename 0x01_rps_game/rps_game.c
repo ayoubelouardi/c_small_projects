@@ -4,16 +4,17 @@
 /**
  * main - Game Simulation Case Study: Rock, Paper, Scissors
  * Description:
- * Each player simultaneously forms one of three shapes with an outstretched
- * hand. The shapes are “rock”, “paper”, and “scissors”. A simultaneous, zero-sum
- * game, it has three possible outcomes: a draw, a win, or a loss. “rock” breaks
- * (wins) “scissors”, “scissors” cuts (wins) “paper”, and “paper” covers (wins)
- * “rock”. If both players choose the same shape, the game is a tie.
+ * Each player simultaneously forms one of three shapes with
+ * an outstretched hand. The shapes are “rock”, “paper”, and
+ * “scissors”. A simultaneous, zero-sum game, it has three
+ * possible outcomes: a draw, a win, or a loss. “rock” breaks
+ * (wins) “scissors”, “scissors” cuts (wins) “paper”,
+ * and “paper”covers (wins) “rock”. If both players choose
+ * the same shape, the game is a tie.
  * Return: Always 0
  */
 
-enum {DRAW, WIN, LOSS};
-enum {ROCK, PAPER, SCISSORS};
+
 int randChoice(void);
 char *numberIntoShape(int);
 int howsWon(int, int);
@@ -60,43 +61,68 @@ int main(void)
 	return (0);
 }
 
+/**
+ * randChoice - return random choice for the computer
+ * Return: int from 0 to 2
+ */
+
 int randChoice(void)
 {
-	return (random_f(0, 2));
+	return (random_f(0, 3));
 }
+
+/**
+ * numberIntoShape - take a number and return shape name
+ * @n: the shape number
+ * Return: the shape name as a string
+ */
 
 char *numberIntoShape(int n)
 {
 	switch (n)
 	{
 		case ROCK:
-			return "ROCK";
+			return ("ROCK");
 		case PAPER:
-			return "PAPER";
+			return ("PAPER");
 		case SCISSORS:
-			return "SCISSORS";
+			return ("SCISSORS");
 	}
-	return "";
+	return ("");
 }
+
+/**
+ * howsWon - tell hows won this turn
+ * @p: the player choice
+ * @c: the computer choice
+ * Return: DRAW, WIN, LOSS;
+ */
 
 int howsWon(int p, int c)
 {
 	if (p == c)
 	{
-		return DRAW;
+		return (DRAW);
 	}
 	else if ((p == ROCK && c == SCISSORS) ||
 			(p == PAPER && c == ROCK) ||
 			(p == SCISSORS && c == PAPER))
 	{
-		return WIN;
+		return (WIN);
 	}
 	else
 	{
-		return LOSS;
+		return (LOSS);
 	}
-	return -1; 
+	return (-1);
 }
+
+/**
+ * print_match_result - print the match result at the end
+ * @results: array to store the number of wins, losses and
+ * draws for the player, results[0] is draws,
+ * results[1] is player wins, results[2] is player losses.
+ */
 
 void print_match_result(int results[])
 {
@@ -107,9 +133,16 @@ void print_match_result(int results[])
 	puts("##############################");
 }
 
+/**
+ * input - print the header of the game and take input.
+ * @round: the round that the game is currently in.
+ * Return: user input
+ */
+
 int input(int round)
 {
 	int n;
+
 	puts("==================");
 	printf("\tRound %d\n", round);
 	puts("==================");
