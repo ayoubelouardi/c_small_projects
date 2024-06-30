@@ -13,27 +13,36 @@ Each player simultaneously forms one of three shapes with an outstretched hand. 
 $ gcc rps_game.c -o game
 $ ./game
 ==================
-Round 0
+	Round 0
 ==================
-Enter 0 (ROCK), or 1 (PAPER), or 2 (SCISSORS): 0
-Computer played SCISSORS
-player WON!
-==================
-Round 1
-==================
-Enter 0 (ROCK), or 1 (PAPER), or 2 (SCISSORS): 1
+Enter 0 (ROCK), or 1 (PAPER), or 2 (SCISSORS):
+0
 Computer played PAPER
-It’s a DRAW!
+Player LOST!
 ==================
-Round 2
+	Round 1
 ==================
-Enter 0 (ROCK), or 1 (PAPER), or 2 (SCISSORS): 0
+Enter 0 (ROCK), or 1 (PAPER), or 2 (SCISSORS):
+0
 Computer played ROCK
 It’s a DRAW!
 ==================
-Round 3
+	Round 2
 ==================
-Enter 0 (ROCK), or 1 (PAPER), or 2 (SCISSORS): 2
-Computer played ROCK
-player LOST!
+Enter 0 (ROCK), or 1 (PAPER), or 2 (SCISSORS):
+0
+Computer played PAPER
+Player LOST!
+==================
+	Round 3
+==================
+Enter 0 (ROCK), or 1 (PAPER), or 2 (SCISSORS):
+0
+Computer played PAPER
+Player LOST!
+##############################
+#	the Player won          0 time
+#	the Computer won          3 time
+#	the Players draw          1 time
+##############################
 ```
