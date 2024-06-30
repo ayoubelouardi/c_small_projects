@@ -1,12 +1,10 @@
-# c_small_projects
-a list of small Project with C, so i can learn how to build things from scratch! 
-
-
-
-## Project 1:
+## Project 1: RPS Game Simulation!
 - Game Simulation Case Study: Rock, Paper, Scissors
 ### Description: 
 Each player simultaneously forms one of three shapes with an outstretched hand. The shapes are “rock”, “paper”, and “scissors”. A simultaneous, zero-sum game, it has three possible outcomes: a draw, a win, or a loss. “rock” breaks (wins) “scissors”, “scissors” cuts (wins) “paper”, and “paper” covers (wins) “rock”. If both players choose the same shape, the game is a tie.
+
+the game will start with asking you for to choice then the computer will choose a random number, the winner is the one
+ho winnes 3 games first.
 
 #### Example: 
 `
