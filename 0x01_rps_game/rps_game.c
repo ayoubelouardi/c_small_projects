@@ -3,6 +3,7 @@
 
 /**
  * main - Game Simulation Case Study: Rock, Paper, Scissors
+ *
  * Description:
  * Each player simultaneously forms one of three shapes with
  * an outstretched hand. The shapes are “rock”, “paper”, and
@@ -11,6 +12,7 @@
  * (wins) “scissors”, “scissors” cuts (wins) “paper”,
  * and “paper”covers (wins) “rock”. If both players choose
  * the same shape, the game is a tie.
+ *
  * Return: Always 0
  */
 
